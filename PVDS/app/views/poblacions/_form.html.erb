@@ -1,0 +1,22 @@
+<%= form_with(model: poblacion, local: true) do |form| %>
+  <% if poblacion.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(poblacion.errors.count, "error") %> prohibited this poblacion from being saved:</h2>
+
+      <ul>
+      <% poblacion.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nombre %>
+    <%= form.text_field :nombre %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

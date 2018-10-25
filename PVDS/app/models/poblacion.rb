@@ -1,0 +1,2 @@
+class Poblacion < ApplicationRecord
+end

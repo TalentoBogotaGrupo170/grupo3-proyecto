@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre: MyString
+  cedula: 1
+  puntos: one
+
+two:
+  nombre: MyString
+  cedula: 1
+  puntos: two
