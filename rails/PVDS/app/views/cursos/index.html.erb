@@ -6,7 +6,7 @@
   <thead>
     <tr>
       <th>Nombre</th>
-      <th>Puntos</th>
+      <th>Punto</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -15,7 +15,7 @@
     <% @cursos.each do |curso| %>
       <tr>
         <td><%= curso.nombre %></td>
-        <td><%= curso.puntos %></td>
+        <td><%= curso.punto %></td>
         <td><%= link_to 'Show', curso %></td>
         <td><%= link_to 'Edit', edit_curso_path(curso) %></td>
         <td><%= link_to 'Destroy', curso, method: :delete, data: { confirm: 'Are you sure?' } %></td>

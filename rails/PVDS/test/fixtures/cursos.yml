@@ -2,8 +2,8 @@
 
 one:
   nombre: MyString
-  puntos: one
+  punto: one
 
 two:
   nombre: MyString
-  puntos: two
+  punto: two

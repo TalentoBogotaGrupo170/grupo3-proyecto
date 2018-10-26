@@ -1,2 +1,0 @@
-class Poblacion < ApplicationRecord
-end

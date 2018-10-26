@@ -15,7 +15,7 @@ class CursosTest < ApplicationSystemTestCase
     click_on "New Curso"
 
     fill_in "Nombre", with: @curso.nombre
-    fill_in "Puntos", with: @curso.puntos_id
+    fill_in "Punto", with: @curso.punto_id
     click_on "Create Curso"
 
     assert_text "Curso was successfully created"
@@ -27,7 +27,7 @@ class CursosTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
 
     fill_in "Nombre", with: @curso.nombre
-    fill_in "Puntos", with: @curso.puntos_id
+    fill_in "Punto", with: @curso.punto_id
     click_on "Update Curso"
 
     assert_text "Curso was successfully updated"

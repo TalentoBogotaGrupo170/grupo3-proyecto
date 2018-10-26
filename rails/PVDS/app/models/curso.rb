@@ -1,3 +1,4 @@
 class Curso < ApplicationRecord
-  belongs_to :puntos
+  belongs_to :punto
+  has_many :users
 end

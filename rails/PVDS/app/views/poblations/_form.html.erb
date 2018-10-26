@@ -1,10 +1,10 @@
-<%= form_with(model: poblacion, local: true) do |form| %>
-  <% if poblacion.errors.any? %>
+<%= form_with(model: poblation, local: true) do |form| %>
+  <% if poblation.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(poblacion.errors.count, "error") %> prohibited this poblacion from being saved:</h2>
+      <h2><%= pluralize(poblation.errors.count, "error") %> prohibited this poblation from being saved:</h2>
 
       <ul>
-      <% poblacion.errors.full_messages.each do |message| %>
+      <% poblation.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>

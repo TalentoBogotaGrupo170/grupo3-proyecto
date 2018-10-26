@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class PoblacionTest < ActiveSupport::TestCase
+class PoblationTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
