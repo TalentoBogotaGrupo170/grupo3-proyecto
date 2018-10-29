@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre: MyString
+  cedula: 1
+  edad: 1
+  point: one
+  course: one
+  poblation: one
+
+two:
+  nombre: MyString
+  cedula: 1
+  edad: 1
+  point: two
+  course: two
+  poblation: two
