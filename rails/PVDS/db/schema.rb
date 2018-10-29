@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_28_225528) do
+ActiveRecord::Schema.define(version: 2018_10_29_195500) do
 
   create_table "courses", force: :cascade do |t|
     t.string "nombre"
@@ -41,9 +41,16 @@ ActiveRecord::Schema.define(version: 2018_10_28_225528) do
     t.integer "poblation_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
     t.index ["course_id"], name: "index_users_on_course_id"
+    t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["poblation_id"], name: "index_users_on_poblation_id"
     t.index ["point_id"], name: "index_users_on_point_id"
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
 end

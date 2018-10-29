@@ -1,6 +1,6 @@
 class PoblationsController < ApplicationController
   before_action :set_poblation, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!
   # GET /poblations
   # GET /poblations.json
   def index
