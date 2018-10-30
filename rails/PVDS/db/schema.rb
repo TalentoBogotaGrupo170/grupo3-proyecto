@@ -12,9 +12,12 @@
 
 ActiveRecord::Schema.define(version: 2018_10_29_195500) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "courses", force: :cascade do |t|
     t.string "nombre"
-    t.integer "point_id"
+    t.bigint "point_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["point_id"], name: "index_courses_on_point_id"
@@ -36,9 +39,9 @@ ActiveRecord::Schema.define(version: 2018_10_29_195500) do
     t.string "nombre"
     t.integer "cedula"
     t.integer "edad"
-    t.integer "point_id"
-    t.integer "course_id"
-    t.integer "poblation_id"
+    t.bigint "point_id"
+    t.bigint "course_id"
+    t.bigint "poblation_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "email", default: "", null: false
@@ -53,4 +56,8 @@ ActiveRecord::Schema.define(version: 2018_10_29_195500) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "courses", "points"
+  add_foreign_key "users", "courses"
+  add_foreign_key "users", "poblations"
+  add_foreign_key "users", "points"
 end
